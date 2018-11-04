@@ -1,2 +1,3 @@
-# Instagram-Layout
-Layout de instagram, creado con HTML &amp; CSS. Usando CSS Grid para organizar las imagenes
+# Instagram Layout
+
+Este es un proyecto creado con CSS y HTML, intentando replicar la interfaz de Instagram. (4/11/2018)
