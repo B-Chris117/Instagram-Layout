@@ -51,28 +51,29 @@
     cursor: pointer;
 }
 
-/*Estilos del Ususario*/
-
+/*Estilos del Usuario*/
+.container-principal{
+    padding: 0 20px;
+}
 .user-information{
-    margin-top: 80px;
-    padding-top: 15px; 
-    margin-right: 10px;
-    margin-left: 10px;
+    margin-top: 78px;
+    display: grid;
+    grid-template-columns: minmax(auto,935px);
+    justify-content: center;
 }
 .container-user-information{
-    max-width: 935px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
+    margin-top: 60px;
+    display: grid;
+    grid-template-areas: "image name"
+                         "image follow"
+                         "image resume";
 }
 .container-avatar{
-    width: 33%;
-    margin-right: 30px;
-    height: inherit;
+    grid-area: image;
+    max-width: 293px;
     display: flex;
     justify-content: center;
-    position: relative;
-    top: 30px;
+    margin-right: 28px;
 }
 .circle{
     width: 170px;
@@ -88,15 +89,11 @@
     align-items: center;
 }
 .main-information{
+    grid-area: name;
     display: flex;
     align-items: center;
-    width: 725px;
     margin-bottom: 20px;
-}
-.user-content{
-    width: 67%;
-    display: flex;
-    flex-direction: column;
+    max-width: 490px;
 }
 .main-information h1{
     font-weight: 300;
@@ -104,14 +101,15 @@
     margin-right: 20px;
 }
 .follow-information{
-    display: none;
-}
-.hidden-content{
+    grid-area: follow;
+    margin-bottom: 20px;
     display: flex;
+    max-width: 490px;
 }
 .list-follow{
     display: flex;
     list-style: none;
+    max-width: 490px;
 }
 .list-follow strong{
     font-weight: 600;
@@ -119,10 +117,12 @@
 .list-follow li{
     margin-right: 40px;
 }
+.list-follow li:last-child{
+    margin-right: 0;
+}
 .resume-information{
-    margin-left: 33%;
-    position: relative;
-    top: -20px;
+    grid-area: resume;
+    max-width: 490px;
 }
 .button{
     background-color: rgba(0,0,0,0);
@@ -209,19 +209,31 @@
     display: flex;
 }
 @media screen and (max-width:735px){
+    .container-principal{
+        padding: 0;
+    }
+    .container-user-information{
+        margin-top: 30px;
+        display: grid;
+        grid-template-areas: "image name name"
+                             "resume resume ."
+                             "follow follow follow";
+    }
     .container-post{
         grid-gap: 3px;
     }
     .follow-information{
-        order: 2;
+        grid-area: follow;
+        max-width: initial;
         width: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         border-top: 1px solid #efefef;
         border-bottom: 1px solid #efefef;
         padding: 12px 0;
     }
     .list-follow{
+        max-width: initial;
         width: 100%;
         display: flex;
         justify-content: space-around;
@@ -238,28 +250,23 @@
         font-size: 14px;
         color: black;
     }
-    .hidden-content{
-        display: none;
-    }
     .circle{
         width: 90px;
     }
     .resume-information{
-        order: 1;
-        margin: 20px 0;
+        grid-area: resume;
+        margin: 20px 16px;
     }
     .user-information{
         margin-right: 0;
         margin-left: 0;
     }
     .container-avatar{
-        position: static;
-    }
-    .resume-information{
         margin-left: 16px;
-        margin-right: 16px;
-        position: static;
-    }
+        grid-area: image;
+        display: flex;
+        justify-content: flex-start;
+    }   
     .resume-information h1{
         font-size: 14px;
     }
@@ -279,30 +286,27 @@
         width: 100%;
     }
     .main-information{
-        display: flex;
-        flex-wrap: wrap;
+        grid-area: name;
+        display: grid;
+        grid-template-areas: "nombre elipsis"
+                             "bnormal chevron";
         width: 100%;
+        justify-content: flex-start;
     }
     .main-information h1{
-        order: 1;
-        margin-right: 10px;
+        grid-area: nombre;
         font-size: 22px;
         font-weight: 400;
     }
 
     .button-normal{
-        width: 200px;
-        order: 3;
+        grid-area: bnormal;
     }
     .button-chevron{
-        order: 4;
+        grid-area: chevron;
     }
     .button-elipsis{
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        order: 2;
-        margin-right: auto; 
+        grid-area: elipsis;
     }
     .overlay-list{
         display: flex;
@@ -320,17 +324,6 @@
         display: none;
     }
 }
-@media screen and (max-width: 440px){
-    .button-normal{
-        width: 70%;
-    }
-    .button-chevron{
-        width: auto;
-        margin: 0;
-    }
-}
 @media screen and (max-width: 320px){
-    .button-normal{
-        width: 115px;
-    }
+    
 }
