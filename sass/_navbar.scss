@@ -1,0 +1,58 @@
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 970px;
+    margin: 0 auto;
+    padding: 25px 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    background: white;
+    border-bottom: 0.5px solid rgba(0,0,0,0.0975);
+    
+    &__container{
+        text-decoration: none;
+        color: black;
+    }
+    &__search{
+        border: 0.5px solid #dbdbdb;
+        padding: 5px 7px 5px 25px;
+        height: 16px;
+        width: 175px;
+        border-radius: 3px;
+        background-image: url("img/busqueda.svg");
+        background-repeat: no-repeat;
+        background-size: 10px;
+        background-position-y: center;
+        background-position-x: 10px;
+        color: #5e5e5e;
+        font-size: 14px;
+    }
+    
+    &__list-icon{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        list-style: none;
+    }
+    
+    &__logo{
+        font-family: 'Lobster Two', cursive;
+        font-size: 24px;
+        cursor: pointer;
+    }
+    
+    &__icon{
+        font-size: 22px;
+        cursor: pointer;
+        margin-left: 30px;
+
+        &--principal{
+            @extend .menu__icon;
+            margin-left: 0;
+        }
+    }
+}

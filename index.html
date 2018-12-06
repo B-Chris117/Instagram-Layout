@@ -6,25 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Lobster+Two:400,700" rel="stylesheet">
     <title>Instagram Layout</title>
 </head>
 <body>
     <nav class="menu">
-        <div class="container-menu">
-            <div class="logo-principal">
-                <a href="index.html">
-                    <i class="fab fa-instagram icon"></i>
-                    <span>  | Instagram</span>
-                </a>
-            </div>
-            <input class="search" type="text" placeholder="Busca">
-            <ul class="tools">
-                <li><i class="far fa-compass icon"></i></li>
-                <li><i class="far fa-heart icon"></i></li>
-                <li><i class="far fa-user icon"></i></li>
-            </ul>
+        <div class="menu__container">
+            <i class="menu__icon--principal fab fa-instagram"></i>
+            <span class="menu__logo"> | Instagram</span>
         </div>
+        <input class="menu__search" type="text" placeholder="Busca">
+        <ul class="menu__list-icon">
+            <li><i class="menu__icon far fa-compass"></i></li>
+            <li><i class="menu__icon far fa-heart"></i></li>
+            <li><i class="menu__icon far fa-user"></i></li>
+        </ul>
     </nav>
     <div class="container-principal">
         <header class="user-information">
