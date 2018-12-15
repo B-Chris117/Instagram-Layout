@@ -47,8 +47,8 @@
     
     &__icon{
         font-size: 22px;
-        cursor: pointer;
         margin-left: 30px;
+        cursor: pointer;
 
         &--principal{
             @extend .menu__icon;

@@ -61,10 +61,155 @@
 
 .menu__icon, .menu__icon--principal {
   font-size: 22px;
-  cursor: pointer;
   margin-left: 30px;
+  cursor: pointer;
 }
 
 .menu__icon--principal {
   margin-left: 0;
+}
+
+.container-principal {
+  padding: 0 20px;
+}
+
+.user-information {
+  margin-top: 78px;
+  display: grid;
+  grid-template-columns: minmax(auto, 935px);
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.container-user-information {
+  margin-top: 60px;
+  display: grid;
+  grid-template-areas: "image name" "image follow" "image resume";
+}
+
+.container-avatar {
+  grid-area: image;
+  max-width: 293px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-right: 28px;
+}
+
+.circle {
+  width: 170px;
+}
+
+.circle img {
+  width: 100%;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.main-information {
+  grid-area: name;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 20px;
+  max-width: 490px;
+}
+
+.main-information h1 {
+  font-weight: 300;
+  font-size: 32px;
+  margin-right: 20px;
+}
+
+.follow-information {
+  grid-area: follow;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 490px;
+}
+
+.list-follow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  max-width: 490px;
+}
+
+.list-follow strong {
+  font-weight: 600;
+}
+
+.list-follow li {
+  margin-right: 40px;
+}
+
+.list-follow li:last-child {
+  margin-right: 0;
+}
+
+.resume-information {
+  grid-area: resume;
+  max-width: 490px;
+}
+
+.button {
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #dbdbdb;
+  font-weight: 600;
+  font-size: 14px;
+  height: 28px;
+  border-radius: 3px;
+}
+
+.button:active {
+  opacity: 0.7;
+}
+
+.button-normal {
+  cursor: pointer;
+  padding: 0 24px;
+  margin-right: 8px;
+}
+
+.button-chevron {
+  cursor: pointer;
+  padding: 0 12px;
+  margin-right: 8px;
+}
+
+.button-elipsis {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  font-weight: 600;
+  font-size: 14px;
+  height: 28px;
+  padding: 0 6px;
+}
+
+.resume-information h1 {
+  font-size: 18.5px;
+  font-weight: 600;
 }
