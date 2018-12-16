@@ -1,106 +1,152 @@
-.container-principal{
+/*Header Styles*\
+\*---Pending---*/
+
+.container-content{
+    background-color: #fafafa;
     padding: 0 20px;
+    @include respond-to(735px){
+        padding: 0;
+    }
 }
-.user-information{
+.user{
+    display: grid;
+    grid-template-columns: minmax(0,935px);
+    justify-content: center;
     margin-top: 78px;
-    display: grid;
-    grid-template-columns: minmax(auto,935px);
-    justify-content: center;
-}
-.container-user-information{
-    margin-top: 60px;
-    display: grid;
-    grid-template-areas: "image name"
-                         "image follow"
-                         "image resume";
-}
-.container-avatar{
-    grid-area: image;
-    max-width: 293px;
-    display: flex;
-    justify-content: center;
-    margin-right: 28px;
+
+    &__container{
+        display: grid;
+        grid-template-areas: "image name"
+                             "image follow"
+                             "image resume";
+        margin-top: 60px;
+
+        @include respond-to(735px){
+            display: grid;
+            grid-template-areas: "image name name"
+                                 "resume resume ."
+                                 "follow follow follow";
+            margin-top: 30px;
+        }
+    }
+    &__avatar{
+        display: flex;
+        justify-content: center;
+        max-width: 293px;
+        margin-right: 28px;
+        grid-area: image;
+
+        @include respond-to(735px){
+            justify-content: flex-start;
+            margin-left: 16px;
+            width: auto;
+        }
+    }
+    
+    &__information{
+        display: flex;
+        align-items: center;
+        max-width: 490px;
+        margin-bottom: 20px;
+        grid-area: name;
+
+        @include respond-to(735px){
+            display: grid;
+            justify-content: flex-start;
+            width: 100%;
+            grid-template-areas: "nombre elipsis"
+                                 "bnormal chevron";
+            grid-area: name;
+        }
+    }
+    &__name{
+        margin-right: 20px;
+        font-weight: 300;
+        font-size: 32px;
+        min-width: 10px;
+        @include respond-to(735px){
+            grid-area: nombre;
+            font-size: 22px;
+            font-weight: 400;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    }
+    &__followers{
+        display: flex;
+        max-width: 490px;
+        margin-bottom: 20px;
+        grid-area: follow;
+        @include respond-to(735px){
+            justify-content: space-around;
+            width: 100%;
+            max-width: initial;
+            border-top: 1px solid #efefef;
+            border-bottom: 1px solid #efefef;
+            padding: 12px 0;
+        }
+    }
+    &__followers-list{
+        display: flex;
+        max-width: 490px;
+        list-style: none;
+        @include respond-to(735px){
+            justify-content: space-around;
+            max-width: initial;
+            width: 100%;
+        }
+    }
+    &__followers-list strong{
+        font-weight: 600;
+        @include respond-to(735px){
+            font-size: 14px;
+            color: black;
+        }
+    }
+    &__followers-list li{
+        margin-right: 40px;
+        @include respond-to(735px){
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            font-size: 14px;
+            align-items: center;
+            color: #999999;
+        }
+    }
+    &__followers-list li:last-child{
+        margin-right: 0;
+    }
+    &__description{
+        grid-area: resume;
+        max-width: 490px;
+        @include respond-to(735px){
+            margin: 20px 16px;
+        }
+    }
+    &__description h2{
+        font-size: 18.5px;
+        font-weight: 600;
+        @include respond-to(735px){
+            font-size: 14px;
+        }
+    }
+    &__description p{
+        @include respond-to(735px){
+            font-size: 14px;
+        }
+    }
 }
 .circle{
     width: 170px;
-}
-.circle img{
-    width: 100%;
-    border-radius: 50%;
-    cursor: pointer;
-}
-.information{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-.main-information{
-    grid-area: name;
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    max-width: 490px;
-}
-.main-information h1{
-    font-weight: 300;
-    font-size: 32px;
-    margin-right: 20px;
-}
-.follow-information{
-    grid-area: follow;
-    margin-bottom: 20px;
-    display: flex;
-    max-width: 490px;
-}
-.list-follow{
-    display: flex;
-    list-style: none;
-    max-width: 490px;
-}
-.list-follow strong{
-    font-weight: 600;
-}
-.list-follow li{
-    margin-right: 40px;
-}
-.list-follow li:last-child{
-    margin-right: 0;
-}
-.resume-information{
-    grid-area: resume;
-    max-width: 490px;
-}
-.button{
-    background-color: rgba(0,0,0,0);
-    border: 1px solid #dbdbdb;
-    font-weight: 600;
-    font-size: 14px;
-    height: 28px;
-    border-radius: 3px;
-}
-.button:active{
-    opacity: 0.7;
-}
-.button-normal{
-    cursor: pointer;
-    padding: 0 24px;
-    margin-right: 8px;
-}
-.button-chevron{
-    cursor: pointer;
-    padding: 0 12px;
-    margin-right: 8px;
-}
-.button-elipsis{
-    cursor: pointer;
-    background-color: rgba(0,0,0,0);
-    border: none;
-    font-weight: 600;
-    font-size: 14px;
-    height: 28px;
-    padding: 0 6px;
-}
-.resume-information h1{
-    font-size: 18.5px;
-    font-weight: 600;
+    @include respond-to(735px){
+        width: 90px;
+    }
+
+    &__image{
+        width: 100%;
+        border-radius: 50%;
+        cursor: pointer;
+    }
 }

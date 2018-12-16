@@ -16,7 +16,7 @@
 .container-post{
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(3,minmax(100px,293px));
+    grid-template-columns: repeat(3,minmax(0,293px));
     grid-gap: 28px;
 }
 .post{
@@ -110,96 +110,9 @@
 }
 
 @media screen and (max-width:735px){
-    .container-principal{
-        padding: 0;
-    }
-    .container-user-information{
-        margin-top: 30px;
-        display: grid;
-        grid-template-areas: "image name name"
-                             "resume resume ."
-                             "follow follow follow";
-    }
     .container-post{
         grid-gap: 3px;
     }
-    .follow-information{
-        grid-area: follow;
-        max-width: initial;
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-        border-top: 1px solid #efefef;
-        border-bottom: 1px solid #efefef;
-        padding: 12px 0;
-    }
-    .list-follow{
-        max-width: initial;
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-    }
-    .list-follow li{
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        font-size: 14px;
-        align-items: center;
-        color: #999999;
-    }
-    .list-follow strong{
-        font-size: 14px;
-        color: black;
-    }
-    .circle{
-        width: 90px;
-    }
-    .resume-information{
-        grid-area: resume;
-        margin: 20px 16px;
-    }
-    .user-information{
-        margin-right: 0;
-        margin-left: 0;
-    }
-    .container-avatar{
-        margin-left: 16px;
-        grid-area: image;
-        display: flex;
-        justify-content: flex-start;
-    }   
-    .resume-information h1{
-        font-size: 14px;
-    }
-    .resume-information p{
-        font-size: 14px;
-    }
-    .information{
-        display: flex;
-        justify-content: flex-start;
-        margin-left: 16px;
-        margin-right: 16px;
-    }
-    .container-avatar{
-        width: auto;
-    }
-    .user-content{
-        width: 100%;
-    }
-    .main-information{
-        grid-area: name;
-        display: grid;
-        grid-template-areas: "nombre elipsis"
-                             "bnormal chevron";
-        width: 100%;
-        justify-content: flex-start;
-    }
-    .main-information h1{
-        grid-area: nombre;
-        font-size: 22px;
-        font-weight: 400;
-    }
-
     .button-normal{
         grid-area: bnormal;
     }
@@ -219,12 +132,4 @@
     .overlay-list li:nth-child(2){
         margin: 0;
     }
-}
-@media screen and (max-width: 580px){
-    .search{
-        display: none;
-    }
-}
-@media screen and (max-width: 320px){
-    
 }

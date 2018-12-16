@@ -1,0 +1,33 @@
+/*BUTTONS STYLES*\
+\*--------------*/
+
+.button{
+    background-color: rgba(0,0,0,0);
+    border: 1px solid #dbdbdb;
+    font-weight: 600;
+    font-size: 14px;
+    height: 28px;
+    border-radius: 3px;
+}
+.button:active{
+    opacity: 0.7;
+}
+.button-normal{
+    cursor: pointer;
+    padding: 0 24px;
+    margin-right: 8px;
+}
+.button-chevron{
+    cursor: pointer;
+    padding: 0 12px;
+    margin-right: 8px;
+}
+.button-elipsis{
+    cursor: pointer;
+    background-color: rgba(0,0,0,0);
+    border: none;
+    font-weight: 600;
+    font-size: 14px;
+    height: 28px;
+    padding: 0 6px;
+}

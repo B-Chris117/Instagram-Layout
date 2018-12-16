@@ -5,47 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="stylesheet" href="estilos.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="estilos.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Lobster+Two:400,700" rel="stylesheet">
     <title>Instagram Layout</title>
 </head>
 <body>
-    <nav class="menu">
-        <div class="menu__container">
-            <i class="menu__icon--principal fab fa-instagram"></i>
-            <span class="menu__logo"> | Instagram</span>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <div class="navbar__logo-container">
+                <i class="navbar__icon navbar__icon--principal fab fa-instagram"></i>
+                <span class="navbar__logo"> Instagram</span>
+            </div>
+            <input class="navbar__search" type="text" placeholder="Busca">
+            <ul class="navbar__list-icon">
+                <li><i class="navbar__icon far fa-compass"></i></li>
+                <li><i class="navbar__icon far fa-heart"></i></li>
+                <li><i class="navbar__icon far fa-user"></i></li>
+            </ul>
         </div>
-        <input class="menu__search" type="text" placeholder="Busca">
-        <ul class="menu__list-icon">
-            <li><i class="menu__icon far fa-compass"></i></li>
-            <li><i class="menu__icon far fa-heart"></i></li>
-            <li><i class="menu__icon far fa-user"></i></li>
-        </ul>
     </nav>
-    <div class="container-principal">
-        <header class="user-information">
-            <div class="container-user-information">
-                <div class="container-avatar">
+    <div class="container-content">
+        <header class="user">
+            <div class="user__container">
+                <div class="user__avatar">
                     <figure class="circle">
-                        <img src="img/avatar.jpg" alt="">
+                        <img class="circle__image" src="img/avatar.jpg" alt="">
                     </figure>
                 </div>
-                <div class="main-information">
-                    <h1>Chris.__.117</h1>
+                <div class="user__information">
+                    <h2 class="user__name">Chris.__.117</h2>
                     <button class="button button-normal">Siguiendo</button>
                     <button class="button button-chevron"><i class="fas fa-chevron-down"></i></button>
                     <button class="button-elipsis"><i class="fas fa-ellipsis-h"></i></button>
                 </div>
-                <div class="follow-information">
-                    <ul class="list-follow">
+                <div class="user__followers">
+                    <ul class="user__followers-list">
                         <li><strong>1.067</strong> publicaciones</li>
                         <li><strong>68,6k</strong> seguidores</li>
-                         <li><strong>553</strong> seguidos</li>
+                        <li><strong>553</strong> seguidos</li>
                     </ul>
                 </div>
-                <div class="resume-information">
-                    <h1>Christian</h1>
+                <div class="user__description">
+                    <h2>Christian</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam facere sint doloribus numquam. Quisquam cum, corporis necessitatibus molestias assumenda unde facilis nihil, dolores, ipsam culpa eaque eius quae ut aperiam?</p>
                 </div>
             </div>
