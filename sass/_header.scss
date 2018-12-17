@@ -1,133 +1,138 @@
-/*Header Styles*\
-\*---Pending---*/
+/*-------------*\
+|*Header Styles*|
+\*-------------*/
 
 .container-content{
-    background-color: #fafafa;
-    padding: 0 20px;
+    background-color: $bg-content;
+    padding: 0px 20px;
+
     @include respond-to(735px){
-        padding: 0;
+        padding: 0px;
     }
 }
 .user{
-    display: grid;
-    grid-template-columns: minmax(0,935px);
+    display: flex;
     justify-content: center;
-    margin-top: 78px;
+    margin-top: 81px;
+    padding-top: 60px;
+
+    @include respond-to(735px){
+        padding: 30px 16px 0px 16px;
+    }
 
     &__container{
         display: grid;
-        grid-template-areas: "image name"
-                             "image follow"
-                             "image resume";
-        margin-top: 60px;
+        grid-template-columns: repeat(3, minmax(0, calc(935px / 3)));
+        grid-template-areas: "image userInformation userInformation"
+                             "image follow follow"
+                             "image resume resume";
 
         @include respond-to(735px){
-            display: grid;
-            grid-template-areas: "image name name"
-                                 "resume resume ."
+            grid-template-columns: auto 1fr 1fr;
+            grid-template-areas: "image userInformation userInformation"
+                                 "resume resume resume"
                                  "follow follow follow";
-            margin-top: 30px;
         }
     }
+
     &__avatar{
         display: flex;
         justify-content: center;
-        max-width: 293px;
         margin-right: 28px;
         grid-area: image;
 
         @include respond-to(735px){
-            justify-content: flex-start;
-            margin-left: 16px;
-            width: auto;
+            margin-right: 0;
         }
     }
     
     &__information{
         display: flex;
         align-items: center;
-        max-width: 490px;
         margin-bottom: 20px;
-        grid-area: name;
+        grid-area: userInformation;
 
         @include respond-to(735px){
             display: grid;
             justify-content: flex-start;
-            width: 100%;
+            margin-left: 28px;
             grid-template-areas: "nombre elipsis"
-                                 "bnormal chevron";
-            grid-area: name;
+                                 "following chevron";
         }
     }
+
     &__name{
         margin-right: 20px;
         font-weight: 300;
         font-size: 32px;
-        min-width: 10px;
+        
         @include respond-to(735px){
             grid-area: nombre;
-            font-size: 22px;
             font-weight: 400;
-            white-space: nowrap;
+            font-size: 22px;
+            min-width: 10px;
             text-overflow: ellipsis;
+            white-space: nowrap;
             overflow: hidden;
         }
     }
+
     &__followers{
         display: flex;
-        max-width: 490px;
         margin-bottom: 20px;
         grid-area: follow;
+
         @include respond-to(735px){
-            justify-content: space-around;
-            width: 100%;
-            max-width: initial;
-            border-top: 1px solid #efefef;
-            border-bottom: 1px solid #efefef;
+            border-top: 1px solid $bd-follow-list;
+            border-bottom: 1px solid $bd-follow-list;
             padding: 12px 0;
+            margin-bottom: 0;
         }
     }
+
     &__followers-list{
         display: flex;
-        max-width: 490px;
         list-style: none;
+
         @include respond-to(735px){
             justify-content: space-around;
-            max-width: initial;
             width: 100%;
         }
     }
+
     &__followers-list strong{
         font-weight: 600;
+
         @include respond-to(735px){
             font-size: 14px;
-            color: black;
         }
     }
+
     &__followers-list li{
         margin-right: 40px;
+
         @include respond-to(735px){
-            margin: 0;
             display: flex;
             flex-direction: column;
-            font-size: 14px;
             align-items: center;
-            color: #999999;
+            margin: 0;
+            font-size: 14px;
+            color: $bg-follow-list;
         }
     }
-    &__followers-list li:last-child{
-        margin-right: 0;
-    }
+
     &__description{
         grid-area: resume;
-        max-width: 490px;
+
         @include respond-to(735px){
-            margin: 20px 16px;
+            margin: 20px 0;
         }
     }
+
     &__description h2{
-        font-size: 18.5px;
+        font-size: 16px;
         font-weight: 600;
+
         @include respond-to(735px){
             font-size: 14px;
         }
