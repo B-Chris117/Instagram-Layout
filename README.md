@@ -1,3 +1,3 @@
 # Instagram Layout
 
-Este es un proyecto creado con CSS y HTML, intentando replicar la interfaz de Instagram. (4/11/2018)
+This is a project created with CSS and HTML, trying to replicate the Instagram interface. (4/11/2018)
